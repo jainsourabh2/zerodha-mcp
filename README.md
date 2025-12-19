@@ -8,7 +8,6 @@ A Python-based trading assistant that connects to a Zerodha MCP server to help u
 - **Interactive Chat Interface**: Natural language interface for trading operations
 - **MCP Integration**: Built on the Model Context Protocol for standardized communication
 - **Zerodha API Integration**: Uses Zerodha's API to interact with the trading platform
-- **Agno Agent**: Uses Agno Agent to interact with the trading platform
 - **Google ADK Agent**: Uses Google ADK Agent to interact with the trading platform
 
 ## Tech Stack
