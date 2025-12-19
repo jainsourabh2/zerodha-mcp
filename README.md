@@ -15,10 +15,7 @@ A Python-based trading assistant that connects to a Zerodha MCP server to help u
 
 - **Protocol**: [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
 - **Agent Framework**:
-  - [Agno](https://github.com/agno-agi/agno)
   - [Google ADK](https://developers.google.com/adk)
- 
-![diagram-export-4-17-2025-4_00_54-PM](https://github.com/user-attachments/assets/e2dc5414-d95e-4297-8eb1-fdbd4fbe4a9b)
 
 ## Tools
 
@@ -32,13 +29,13 @@ A Python-based trading assistant that connects to a Zerodha MCP server to help u
 - **Get Holdings**: Get holdings in the trading platform
 - **Get Positions**: Get positions in the trading platform
 - **Get User Profile**: Get user profile in the trading platform
+- **Get Stock News & Fundamentals**: Gets news about a specific stock
 
 ## Prerequisites
 
 - Python
 - Zerodha trading account with Personal API access from [here](https://developers.kite.trade/login)
 - Zerodha API key and secret
-- OpenAI API key (for Agno Agent)
 - Gemini API key or Application Default Credentials (for Google ADK Agent)
 
 ## Installation
@@ -46,8 +43,8 @@ A Python-based trading assistant that connects to a Zerodha MCP server to help u
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/mtwn105/zerodha-mcp-server-client.git
-cd zerodha-mcp-server-client
+git clone https://github.com/jainsourabh2/zerodha-mcp.git
+cd zerodha-mcp
 ```
 
 2. Create and activate a virtual environment:
@@ -60,7 +57,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 3. Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 4. Set up environment variables:
@@ -123,26 +120,10 @@ The server provides the following tools:
 
 This project provides three client implementations:
 
-1. Using the Agno framework (`client/agno_client.py`)
-2. Using Agno with Gradio web interface (`client/agno_gradio_client.py`)
-3. Using Google ADK (`client/google_adk_client.py`)
+1. Using Google ADK (`client/google_adk_client.py`)
 
 All clients connect to the MCP server and provide an interactive interface for trading operations.
 
-### Running the Agno Client
-
-1. Ensure your `.env` file includes `OPENAI_API_KEY`.
-2. Start the client using one of the following methods:
-
-```bash
-# Using environment variables from .env file
-python client/agno_client.py
-
-# Using command line arguments
-python client/agno_client.py --host localhost --port 8001
-
-# Using a combination (command line arguments take precedence)
-MCP_HOST=localhost MCP_PORT=8001 python client/agno_client.py --host otherhost --port 9000
 ```
 
 ### Running the Google ADK Client
@@ -232,9 +213,7 @@ OPENAI_API_KEY=your_openai_api_key
 
 ### Project Structure
 
-- `client/agno_client.py`: MCP client implementation using Agno
 - `client/google_adk_client.py`: MCP client implementation using Google ADK
-- `client/agno_gradio_client.py`: Web interface using Gradio and Agno
 - `server.py`: MCP server implementation with Zerodha API integration
 - `generate_token.py`: Utility for generating access tokens
 - `requirements.txt`: Project dependencies
@@ -254,7 +233,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Acknowledgments
 
-- Built using [Agno](https://github.com/agno-agi/agno)
 - Built using [Google ADK](https://google.github.io/adk-docs/)
 - Uses [MCP](https://modelcontextprotocol.io/) for standardized communication
 - Powered by [KiteConnect](https://kite.trade/) for Zerodha API integration
