@@ -80,8 +80,7 @@ SERVER_MODE=sse  # or stdio
 # Client Configuration
 MCP_HOST=localhost
 MCP_PORT=8001
-OPENAI_API_KEY=your_openai_api_key
-# GOOGLE_API_KEY=your_google_api_key
+GOOGLE_API_KEY=your_google_api_key
 ```
 
 ## Server Usage
