@@ -141,33 +141,6 @@ python client/google_adk_client.py --host localhost --port 8001
 MCP_HOST=localhost MCP_PORT=8001 python client/google_adk_client.py --host otherhost --port 9000
 ```
 
-### Running the Gradio Web Interface
-
-1. Ensure your `.env` file includes `OPENAI_API_KEY`.
-2. Start the Gradio web interface:
-
-```bash
-# Using environment variables from .env file
-python client/agno_gradio_client.py
-
-# Using command line arguments for server configuration
-python client/agno_gradio_client.py --host localhost --port 8001
-```
-
-3. Open your web browser and navigate to the URL shown in the terminal (typically `http://localhost:7860`).
-
-4. Use the web interface to:
-   - Connect to the MCP server by entering the host and port
-   - Chat with the AI assistant using natural language
-   - Manage your Zerodha account through a user-friendly interface
-
-The Gradio interface provides:
-
-- Easy connection management with host/port configuration
-- Real-time chat interface with the AI assistant
-- Visual feedback for connection status
-- Mobile-friendly responsive design
-
 ### Client Configuration
 
 Both clients support configuration through multiple sources, with the following precedence:
